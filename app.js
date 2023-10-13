@@ -10,7 +10,7 @@ let server = http.createServer(function(request, response){
   console.log(request.url);
 
   response.writeHead(200, contenType);
-  response.end();
+  response.end(console.log(''));
   
   fs.readFile("index.html", function(err, data){
     if (err) {
