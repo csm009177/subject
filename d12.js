@@ -43,11 +43,12 @@ http.createServer(function(request, response) {
    * 
    */
 
-  fs.readFile("./public/index.html", function(err, data){
-    if (err) {
-      console.error('파일을 읽지 못했습니다');
-    } else {
-      response.end(data);
-    }
-  })
-}).listen(8080);
+    fs.readFile("index.html", function(err, data){
+      if (err) {
+        console.error('파일을 읽지 못했습니다');
+      } else {
+        response.end(data);
+      }
+    })
+}).listen(1234);
+
