@@ -2,7 +2,7 @@
 const http = require('http');
 const fs = require('fs');
 
-const contenType = require('./mod/contenType');
+const contenType = require('./mod/contenType.js');
 console.log(contenType);
 
 let server = http.createServer(function(request, response){
