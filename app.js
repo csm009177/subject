@@ -5,11 +5,12 @@ const fs = require('fs');
 const contenType = require('./mod/contenType');
 console.log(contenType);
 
-http.createServer(function(request, response){
+let server = http.createServer(function(request, response){
   console.log(request.method);
   console.log(request.url);
- 
+
   response.writeHead(200, contenType);
+  response.end();
   
   fs.readFile("index.html", function(err, data){
     if (err) {
@@ -17,5 +18,9 @@ http.createServer(function(request, response){
     } else {
       response.end(data);
     }
-  })`1`
-}).listen(1234);
+  })
+});
+
+server.listen(1234, function(){
+  console.log('서버 가동중 끄려면 Ctrl + C를 누르세요')
+})
