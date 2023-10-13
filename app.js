@@ -2,10 +2,8 @@
 const http = require('http');
 const fs = require('fs');
 
-const contenType = {
-  'Content-Type' : 'text/html',
-  'charset' : 'utf-8',
-}
+const contenType = require('./mod/contenType');
+console.log(contenType);
 
 http.createServer(function(request, response){
   console.log(request.method);
@@ -19,5 +17,5 @@ http.createServer(function(request, response){
     } else {
       response.end(data);
     }
-  })
+  })`1`
 }).listen(1234);
