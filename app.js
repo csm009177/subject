@@ -2,13 +2,16 @@
 const http = require('http');
 const fs = require('fs');
 
+const contenType = {
+  'Content-Type' : 'text/html',
+  'charset' : 'utf-8',
+}
+
 http.createServer(function(request, response){
   console.log(request.method);
   console.log(request.url);
-  let writeHeadObject = {
-    'Content-Type' : 'text/html'
-  }
-  response.writeHead(200, writeHeadObject);
+ 
+  response.writeHead(200, contenType);
   
   fs.readFile("index.html", function(err, data){
     if (err) {
