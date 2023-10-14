@@ -59,17 +59,24 @@
       setTimeout(function(){
         divTxt.style.color = "black";
         divTxt.innerHTML = "두번 마셨다";
-      setTimeout(function(){
-
+        img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+        setTimeout(function(){
+          divTxt.style.color = "black";
+          divTxt.innerHTML = "세번 마셨다";
+          img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
         setTimeout(function(){
           img.src ="https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
           divTxt.style.color = "red";
           divTxt.innerHTML = "탈수증에 걸렸다";
-          let hospitalBnt = document.createElement('button');
-          document.appendChild('hospitalBnt');  
+          setTimeout(function(){
+            divTxt.style.color = "green";
+            divTxt.innerHTML = "병원에 가야한다";
+            let hospitalBnt = document.createElement('button');
+            document.appendChild('hospitalBnt');  
         },2200)
       },2200)
       },2200)
+      },2200);
     },2200);
 
 
