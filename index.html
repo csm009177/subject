@@ -41,15 +41,19 @@
 <body>
   <div id="root">
     <img id="drinkWata">
-    <div></div>
+    <div id="txt"></div>
   </div>
   <script>
+    let divTxt = document.getElementById('txt')
+    divTxt.style.innerText = "test";
+    
+    divTxt.style.color = "black"
     let img =document.getElementById('drinkWata');
     img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
     setTimeout(function(){
-      alert("소금물 먹는다-1");
+      
       setTimeout(function(){
-        alert("소금물 먹는다-2");
+      
         setTimeout(function(){
           img.src ="https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
         },8000)
