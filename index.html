@@ -55,6 +55,7 @@
     <button id="bnt">바다물을 마셔라</button>
   </div>
   <script>
+    // 초기 화면 및 
     let divTxt = document.getElementById('txt')
     let bnt = document.getElementById('bnt')
     console.dir(divTxt);
@@ -68,7 +69,10 @@
         divTxt.style.color = "black";
         divTxt.innerHTML = "한번 마셨다";
         img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-        
+        setTimeout(function(){
+          
+        })
+        bnt.addEventListener('click',function(){        
         setTimeout(function(){
           divTxt.style.color = "black";
           divTxt.innerHTML = "두번 마셨다";
@@ -84,13 +88,13 @@
             setTimeout(function(){
               divTxt.style.color = "green";
               divTxt.innerHTML = "병원에 가야한다";
-              let hospitalBnt = document.createElement('button');
-              hospitalBnt.appendChild('hospitalBnt');   
+              bnt.addEventListener()
           },2200)
         },2200)
         },2200)
         },2200);
       },2200);
+    })
     })
 
   </script>
