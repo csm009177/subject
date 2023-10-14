@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>*{margin:0;padding:0;box-sizing:border-box;}
-    body { width: 100vw; height: 100vh;}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
     #root {
       width: 100vw;
       height: 100vh;
@@ -17,7 +28,8 @@
       text-align: center;
       justify-content: center;
     }
-    #root > img{
+
+    #root>img {
       width: 100vw;
       height: 95vh;
       display: flex;
@@ -26,16 +38,7 @@
       justify-content: center;
     }
 
-    #root > div{
-      width: 50vw;
-      height: 5vh;
-      font-size: 3vh;
-      display: flex;
-      flex-wrap: wrap;
-      text-align: center;
-      justify-content: center;
-    }
-    #root > button{
+    #root>div {
       width: 50vw;
       height: 5vh;
       font-size: 3vh;
@@ -45,9 +48,18 @@
       justify-content: center;
     }
 
-
+    #root>button {
+      width: 50vw;
+      height: 5vh;
+      font-size: 3vh;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
   </style>
 </head>
+
 <body>
   <div id="root">
     <img id="drinkWata">
@@ -62,42 +74,44 @@
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
-    let img =document.getElementById('drinkWata');
+    let img = document.getElementById('drinkWata');
     // 초기 이미지
-    img.src ="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
-    bnt.addEventListener('click',function(){
-      setTimeout(function(){
+    img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
+    bnt.addEventListener('click', function () {
+      setTimeout(function () {
         divTxt.style.color = "black";
         divTxt.innerHTML = "한번 마셨다";
-        img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+        img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+        // 초기 이미지로 돌아가기 위한 settieout
         setTimeout(function(){
-          
-        })
-        bnt.addEventListener('click',function(){        
-        setTimeout(function(){
-          divTxt.style.color = "black";
-          divTxt.innerHTML = "두번 마셨다";
-          img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-          setTimeout(function(){
+          img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
+        }, 2200)
+        bnt.addEventListener('click', function () {
+          setTimeout(function () {
             divTxt.style.color = "black";
-            divTxt.innerHTML = "세번 마셨다";
-            img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-          setTimeout(function(){
-            img.src ="https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
-            divTxt.style.color = "red";
-            divTxt.innerHTML = "탈수증에 걸렸다";
-            setTimeout(function(){
-              divTxt.style.color = "green";
-              divTxt.innerHTML = "병원에 가야한다";
-              bnt.addEventListener()
-          },2200)
-        },2200)
-        },2200)
-        },2200);
-      },2200);
-    })
+            divTxt.innerHTML = "두번 마셨다";
+            img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+            setTimeout(function () {
+              divTxt.style.color = "black";
+              divTxt.innerHTML = "세번 마셨다";
+              img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+              setTimeout(function () {
+                img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
+                divTxt.style.color = "red";
+                divTxt.innerHTML = "탈수증에 걸렸다";
+                setTimeout(function () {
+                  divTxt.style.color = "green";
+                  divTxt.innerHTML = "병원에 가야한다";
+                  bnt.addEventListener()
+                }, 2200)
+              }, 2200)
+            }, 2200)
+          }, 2200);
+        }, 2200);
+      })
     })
 
   </script>
 </body>
+
 </html>
