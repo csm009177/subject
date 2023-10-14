@@ -27,7 +27,16 @@
     }
 
     #root > div{
-      width: 100vw;
+      width: 50vw;
+      height: 5vh;
+      font-size: 3vh;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+    #root > button{
+      width: 50vw;
       height: 5vh;
       font-size: 3vh;
       display: flex;
@@ -43,42 +52,46 @@
   <div id="root">
     <img id="drinkWata">
     <div id="txt"></div>
+    <button id="bnt">바다물을 마셔라</button>
   </div>
   <script>
     let divTxt = document.getElementById('txt')
+    let bnt = document.getElementById('bnt')
     console.dir(divTxt);
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
     let img =document.getElementById('drinkWata');
     img.src ="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
-    setTimeout(function(){
-      divTxt.style.color = "black";
-      divTxt.innerHTML = "한번 마셨다";
-      img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+    bnt.addEventListener('click',function(){
       setTimeout(function(){
         divTxt.style.color = "black";
-        divTxt.innerHTML = "두번 마셨다";
+        divTxt.innerHTML = "한번 마셨다";
         img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+        
         setTimeout(function(){
           divTxt.style.color = "black";
-          divTxt.innerHTML = "세번 마셨다";
+          divTxt.innerHTML = "두번 마셨다";
           img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-        setTimeout(function(){
-          img.src ="https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
-          divTxt.style.color = "red";
-          divTxt.innerHTML = "탈수증에 걸렸다";
           setTimeout(function(){
-            divTxt.style.color = "green";
-            divTxt.innerHTML = "병원에 가야한다";
-            let hospitalBnt = document.createElement('button');
-            document.appendChild('hospitalBnt');  
+            divTxt.style.color = "black";
+            divTxt.innerHTML = "세번 마셨다";
+            img.src ="https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
+          setTimeout(function(){
+            img.src ="https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
+            divTxt.style.color = "red";
+            divTxt.innerHTML = "탈수증에 걸렸다";
+            setTimeout(function(){
+              divTxt.style.color = "green";
+              divTxt.innerHTML = "병원에 가야한다";
+              let hospitalBnt = document.createElement('button');
+              hospitalBnt.appendChild('hospitalBnt');   
+          },2200)
         },2200)
-      },2200)
-      },2200)
+        },2200)
+        },2200);
       },2200);
-    },2200);
-
+    })
 
   </script>
 </body>
