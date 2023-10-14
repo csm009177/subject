@@ -20,6 +20,6 @@ let server = http.createServer(function(request, response){
   })
 });
 
-server.listen(1234, function(){
+server.listen(8080, function(){
   console.log('서버 가동중 끄려면 Ctrl + C를 누르세요')
 })
