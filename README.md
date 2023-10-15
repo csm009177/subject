@@ -13,3 +13,5 @@ subject : know about drink sea wata and wha happen
 6. .gitignore - git에 올리지 않고 무시할 파일의 목록
 
 7. README.md - 결정한 주제에 대한 전반적인 설명
+
+8. branch v1 - 필요없게된 기능들을 정리하여 버전관리
