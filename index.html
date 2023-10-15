@@ -71,13 +71,14 @@
     let divTxt = document.getElementById('txt')
     let bnt = document.getElementById('bnt')
     let aTag = document.getElementById('aTag')
+    
     console.dir(divTxt);
     console.dir(bnt);
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
     let img = document.getElementById('drinkWata');
-    bnt.innerHTML = "마신다";
+    bnt.innerHTML = "마신다"
     // 초기 이미지
     img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
 
@@ -86,7 +87,7 @@
       setTimeout(function () {
         img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
       }, 2200);
-    }
+    };
 
     // 첫번째 클릭을 위한 버튼 만들기
     bnt.addEventListener('click', function () {
@@ -120,19 +121,19 @@
                 // 세번째 클릭 후에 네번째 클릭을 위한 세팅
                 bnt.addEventListener('click', function () {
                   setTimeout(function () {
-                    img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
                     divTxt.style.color = "red";
                     divTxt.innerHTML = "탈수증에 걸렸다";
+                    // img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp";
                     
                     
                     setTimeout(function () {
+                      img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp";
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
-                      bnt.innerHTML = "";
-                      aTag.innerHTML = "병원에 간다";
-                      
-                      
+                      let aTag = document.getElementById('aTag')
+                      aTag.innerText = "병원에 간다";                     
                     }, 2200)
+                    
                   }, 2200)
                 }, 2200)
               }, 2200);
