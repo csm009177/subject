@@ -64,7 +64,7 @@
   <div id="root">
     <img id="drinkWata">
     <div id="txt"></div>
-    <button id="bnt"><a id="aTag"href="hos.html"></a></button>
+    <button id="bnt"><a id="aTag" href="hos.html"></a></button>
   </div>
   <script>
     // 초기 화면 및 
@@ -117,21 +117,21 @@
                 // 초기 이미지로 돌아가기 위한 settieout
                 imgInit()
 
+                // 세번째 클릭 후에 네번째 클릭을 위한 세팅
                 bnt.addEventListener('click', function () {
                   setTimeout(function () {
                     img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
                     divTxt.style.color = "red";
                     divTxt.innerHTML = "탈수증에 걸렸다";
                     
-
+                    
                     setTimeout(function () {
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
-                      bnt.innerHTML = "병원에 간다";
-                
-                      bnt.addEventListener('click', function(){
-                        aTag.
-                      })
+                      bnt.innerHTML = "";
+                      aTag.innerHTML = "병원에 간다";
+                      
+                      
                     }, 2200)
                   }, 2200)
                 }, 2200)
