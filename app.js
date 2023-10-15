@@ -10,15 +10,26 @@ let server = http.createServer(function(request, response){
   console.log(request.method);
   console.log(request.url);
 
-  response.writeHead(200, contenType);
-  
-  fs.readFile("index.html", function(err, data){
-    if (err) {
-      console.error('파일을 읽지 못했습니다');
-    } else {
-      response.end(data);
-    }
-  })
+  if (request.url === "/") {
+    fs.readFile("index.html", function(err, data){
+      if (err) {
+        console.error('파일을 읽지 못했습니다');
+      } else {
+        response.writeHead(200, contenType);
+        response.end(data);
+      }
+    })
+  }
+  if (request.url === "/hospital"){
+    fs.readFile("hospital.html", function(err, data){
+      if (err) {
+        console.error('파일을 읽지 못했습니다');
+      } else {
+        response.writeHead(200, contenType);
+        response.end(data);
+      }
+    })
+  }
 });
 
 server.listen(8080, function(){
