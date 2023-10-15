@@ -64,12 +64,13 @@
   <div id="root">
     <img id="drinkWata">
     <div id="txt"></div>
-    <button id="bnt"></button>
+    <button id="bnt"><a id="aTag"href="hos.html"></a></button>
   </div>
   <script>
     // 초기 화면 및 
     let divTxt = document.getElementById('txt')
     let bnt = document.getElementById('bnt')
+    let aTag = document.getElementById('aTag')
     console.dir(divTxt);
     console.dir(bnt);
     divTxt.style.background = "white";
@@ -96,7 +97,7 @@
 
         // 초기 이미지로 돌아가기 위한 settieout
         imgInit()
-
+        // 첫번째 클릭 후에 두번째 클릭을 위한 세팅
         bnt.addEventListener('click', function () {
           setTimeout(function () {
             divTxt.style.color = "black";
@@ -106,6 +107,7 @@
             // 초기 이미지로 돌아가기 위한 settieout
             imgInit()
 
+            // 두번째 클릭 후에 세번째 클릭을 위한 세팅
             bnt.addEventListener('click', function () {
               setTimeout(function () {
                 divTxt.style.color = "red";
@@ -120,14 +122,15 @@
                     img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp"
                     divTxt.style.color = "red";
                     divTxt.innerHTML = "탈수증에 걸렸다";
-              
+                    
+
                     setTimeout(function () {
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
                       bnt.innerHTML = "병원에 간다";
                 
                       bnt.addEventListener('click', function(){
-                        
+                        aTag.
                       })
                     }, 2200)
                   }, 2200)
