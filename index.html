@@ -74,11 +74,13 @@
     
     console.dir(divTxt);
     console.dir(bnt);
+    console.dir(aTag);
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
     let img = document.getElementById('drinkWata');
-    bnt.innerHTML = "마신다"
+    bnt.innerHTML = "마신다";
+    bnt.formAction = "hos.html"
     // 초기 이미지
     img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
 
@@ -131,7 +133,8 @@
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
                       let aTag = document.getElementById('aTag')
-                      aTag.innerText = "병원에 간다";                     
+                      bnt.innerHTML = "병원에 간다";               
+                      aTag.innerHTML = "병원에 간다";
                     }, 2200)
                     
                   }, 2200)
