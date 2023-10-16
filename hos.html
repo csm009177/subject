@@ -65,7 +65,7 @@
     function doctimgInit(){
       setTimeout(function () {
         img.src = "https://i.namu.wiki/i/nnxBGXHsmuBzeOEf8NQPQYCrVV8VaYOsbDvuqapzYZArY0owTCPnXHELPFO7HqkSphsyWr7tyRB3q3R1VJ39ip3uMCEi980AEafmegRrRyzA9kRm-cZw1_zXdJgFj5e1oL_qg3A8NGGA3HF4s6DVpw.webp";
-      });
+      },2200);
     };
     //환자 이미지로 돌아가기 위한 fnc
     function pattimgInit(){
@@ -75,12 +75,13 @@
 
     img.src = "https://www.doctorsnews.co.kr/news/photo/202207/145218_105692_5242.jpg"
     doctimgInit()
-    txt.innerHTML = "여기는 병원이요"
-
+    
+    txt.innerHTML = "여기는 병원이요";
+    bnt.innerHTML = "";
     setTimeout(function(){
       bnt.innerHTML = "나는 어떻게 된것이요?";
       pattimgInit()
-      },2200)
+      },4400)
 
     bnt.style.backgroundColor = "rgb(128, 128, 128)";
     bnt.addEventListener('click', function(){
@@ -89,8 +90,15 @@
       pattimgInit()
       setTimeout(function(){
         bnt.innerHTML = "그러면 죽는것이오?";
-      },2200)
-
+        bnt.addEventListener('click', function(){
+          doctimgInit()
+          txt.innerHTML = "걱정 말고 링겔이나 맞으시오";
+          setTimeout(function(){
+            bnt.innerHTML = "그러면 링겔을 주시오";
+            pattimgInit()
+          },2200);
+        })
+      },2200);
     })
     
 
