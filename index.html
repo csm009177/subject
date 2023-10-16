@@ -64,7 +64,7 @@
   <div id="root">
     <img id="drinkWata">
     <div id="txt"></div>
-    <button id="bnt"><a id="aTag" href="hos.html"></a></button>
+    <button id="bnt"></button>
   </div>
   <script>
     // 초기 화면 및 
@@ -74,7 +74,6 @@
     
     console.dir(divTxt);
     console.dir(bnt);
-    console.dir(aTag);
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
@@ -131,6 +130,7 @@
                       divTxt.innerHTML = "병원에 가야한다";
                       bnt.innerHTML = "병원에 간다";
                       let aTag = document.getElementById('aTag');
+                      
                       bnt.addEventListener("click", ()=>{
                         window.location = 'http://127.0.0.1:5500/hospital';
                       });
