@@ -130,11 +130,15 @@
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
                       bnt.innerHTML = "병원에 간다";
-                      let aTag = document.getElementById('aTag')
-                    }, 2200)
+                      let aTag = document.getElementById('aTag');
+                      bnt.addEventListener("click", ()=>{
+                        window.location = 'http://127.0.0.1:5500/hospital';
+                      });
+
+                    }, 2200);
                     
-                  }, 2200)
-                }, 2200)
+                  }, 2200);
+                }, 2200);
               }, 2200);
             }, 2200);
           })
