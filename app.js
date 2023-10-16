@@ -7,7 +7,8 @@ const contenType = require('./mod/contenType.js');
 console.log(contenType);
 
 let server = http.createServer(function(request, response){
-  console.log(request.method);
+  console.info(request.method)
+  console.log(request);
   console.log(request.url);
 
   if (request.url === "/") {
