@@ -20,16 +20,16 @@ let server = http.createServer(function(request, response){
       }
     })
   }
-  if (request.url === "/hos"){
-    fs.readFile("hos.html", function(err, data){
-      if (err) {
-        console.error('파일을 읽지 못했습니다');
-      } else {
-        response.writeHead(200, contenType);
-        response.end(data);
-      }
-    })
-  }
+  // if (request.url === "/hos"){
+  //   fs.readFile("hos.html", function(err, data){
+  //     if (err) {
+  //       console.error('파일을 읽지 못했습니다');
+  //     } else {
+  //       response.writeHead(200, contenType);
+  //       response.end(data);
+  //     }
+  //   })
+  // }
 });
 
 server.listen(8080, function(){
