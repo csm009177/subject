@@ -15,3 +15,12 @@ subject : know about drink sea wata and wha happen
 7. README.md - 결정한 주제에 대한 전반적인 설명
 
 8. branch v1 - 필요없게된 기능들을 정리하여 버전관리
+
+
+skill
+
+태그를 불러오기 : getElementById(‘’)
+클릭 이벤트를 받을 수 있는 메서드 : addEventListener
+시간에 따라 특정 조건이 실행되는 메서드 : setTimeout(function(){}, 2200)
+모듈화 하기 : module.exports = fnc; / const fnc = require(‘fnc’) 
+조건에 따라 url을 불러온는 판단 if(request.url === /page){실행}
