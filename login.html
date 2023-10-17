@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Login Form</h1>
+  <form action="/login" method="get">
+    <input type="text" name="username" placeholder="username"><br>
+    <input type="password" name="password" placeholder="password"><br><br>
+    <input type="submit" value="login">
+  </form> 
+  <!-- 
+    위 form 태그 container를 정적으로 작성하고,
+    submit 이벤트를 발생시키면 app.js 서버측에서 다음과 같은 응답을 보낸다.
+    /login?username=hello&password=1234 
+  -->
+
+
+</div>
+<script src="./js/index.js"></script>
+</body>
+</html>

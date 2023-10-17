@@ -62,9 +62,9 @@
 
 <body>
   <div id="root">
-    <img id="drinkWata">
+    <img id="drinkWata" alt="">
     <div id="txt"></div>
-    <button id="bnt"><a id="aTag" href="hos.html"></a></button>
+    <button id="bnt"></button>
   </div>
   <script>
     // 초기 화면 및 
@@ -74,12 +74,11 @@
     
     console.dir(divTxt);
     console.dir(bnt);
-    console.dir(aTag);
     divTxt.style.background = "white";
     divTxt.style.color = "black";
     divTxt.innerHTML = "바다물을 마셔라";
     let img = document.getElementById('drinkWata');
-    bnt.innerHTML = "마신다";
+    bnt.innerHTML = "멕인다";
     // 초기 이미지
     img.src = "https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg";
 
@@ -93,50 +92,63 @@
     // 첫번째 클릭을 위한 버튼 만들기
     bnt.addEventListener('click', function () {
       setTimeout(function () {
+        if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
         divTxt.style.color = "black";
         divTxt.innerHTML = "한번 마셨다";
-        img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-
+        img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";}
         // 초기 이미지로 돌아가기 위한 settieout
         imgInit()
+        clearTimeout()
         // 첫번째 클릭 후에 두번째 클릭을 위한 세팅
         bnt.addEventListener('click', function () {
           setTimeout(function () {
+            if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
             divTxt.style.color = "black";
             divTxt.innerHTML = "두번 마셨다";
             img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-
+            }
             // 초기 이미지로 돌아가기 위한 settieout
             imgInit()
+            clearTimeout()
 
             // 두번째 클릭 후에 세번째 클릭을 위한 세팅
             bnt.addEventListener('click', function () {
               setTimeout(function () {
+                if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
                 divTxt.style.color = "red";
                 divTxt.innerHTML = "세번 마셨다";
-                img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
-
+                img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";}
                 // 초기 이미지로 돌아가기 위한 settieout
                 imgInit()
+                clearTimeout()
 
                 // 세번째 클릭 후에 네번째 클릭을 위한 세팅
                 bnt.addEventListener('click', function () {
                   setTimeout(function () {
                     divTxt.style.color = "red";
                     divTxt.innerHTML = "탈수증에 걸렸다";
-                    
+                    clearTimeout()
                     setTimeout(function () {
-                      img.src = "https://i.namu.wiki/i/nFcuHcuke2k-9rLpz-mjDMMnhSGl2oWh4EOxf0eezM1NlSel4_MEgA0S5BM6ukcI3hf_UOizQmZbxkr7LkAa2s17xfawN7S8m9Za_W50Klf_BwYfnRjO31SsqLz_DCLSgHZ7iBCZN-Mti3rd6mPOeg.webp";
+                      img.src = "https://image.kmib.co.kr/online_image/2020/0516/611319110014584603_4.jpg";
                       divTxt.style.color = "green";
                       divTxt.innerHTML = "병원에 가야한다";
-                      let aTag = document.getElementById('aTag')
-                      bnt.innerHTML = "병원에 간다";               
-                    }, 2200)
+                      bnt.innerHTML = "병원에 간다";
+                      let aTag = document.getElementById('aTag');
+                      clearTimeout()
+                      bnt.addEventListener("click", ()=>{
+                        if(img.src = "https://image.kmib.co.kr/online_image/2020/0516/611319110014584603_4.jpg"){
+                      // window.location = 'hos.html';
+                      window.location = 'localhost:8080/hos';
+                      clearTimeout()
+                        }
+                      });
+
+                    }, 100);
                     
-                  }, 2200)
-                }, 2200)
-              }, 2200);
-            }, 2200);
+                  }, 100);
+                }, 100);
+              }, 100);
+            }, 100);
           })
         })
       })

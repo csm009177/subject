@@ -4,8 +4,104 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hospital</title>
+  <style>
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      background-color: rgb(128, 128, 128);
+      color: rgb(0, 0, 0);
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+  
+    #root>img {
+      width: 100vw;
+      height: 95vh;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+
+    #root>div {
+      width: 70vw;
+      height: 5vh;
+      font-size: 3vh;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+  
+  </style>
 </head>
 <body>
-  test
+  <div id="root">
+    <img id="img" alt="">
+    <div id="txt"></div>
+    <button id="bnt"></button>
+  </div>
+  </div>
+  <script>
+    let img = document.getElementById('img');
+    let divTxt = document.getElementById('txt');
+    let bnt = document.getElementById('bnt');
+    
+    //의사 이미지로 돌아가기 위한 fnc
+    function doctimgInit(){
+      setTimeout(function () {
+        img.src = "https://i.namu.wiki/i/nnxBGXHsmuBzeOEf8NQPQYCrVV8VaYOsbDvuqapzYZArY0owTCPnXHELPFO7HqkSphsyWr7tyRB3q3R1VJ39ip3uMCEi980AEafmegRrRyzA9kRm-cZw1_zXdJgFj5e1oL_qg3A8NGGA3HF4s6DVpw.webp";
+      },2200);
+    };
+    //환자 이미지로 돌아가기 위한 fnc
+    function pattimgInit(){
+        img.src = "https://media.istockphoto.com/id/1046447678/ko/%EC%82%AC%EC%A7%84/%EB%B3%91%EC%9B%90-%EC%95%84%ED%94%88-%EB%82%A8%EC%84%B1-%ED%99%98%EC%9E%90%EC%97%90%EC%84%9C-%EC%B9%A8%EB%8C%80%EC%97%90-%EB%88%84%EC%9B%8C-%EA%B7%B8%EB%8A%94-%EA%B7%B8-%EC%88%A8%EC%9D%84-%EC%88%98-%EC%9E%88%EB%8F%84%EB%A1%9D-%EB%B9%84-%EA%B0%95-%EC%A0%95%EC%9D%84-%EC%9E%85%EA%B3%A0-%EC%9E%88%EB%8B%A4-%EB%B3%91%EC%97%90-%EA%B1%B8%EB%A0%A4-%EB%82%A8%EC%9E%90.jpg?s=1024x1024&w=is&k=20&c=XkoFQ88iknuy9ILv5bCyCD_XTtV6OIM3AsQ73CbTXYU=";
+    };
+
+
+    img.src = "https://www.doctorsnews.co.kr/news/photo/202207/145218_105692_5242.jpg"
+    doctimgInit()
+    
+    txt.innerHTML = "여기는 병원이요";
+    bnt.innerHTML = "";
+    setTimeout(function(){
+      bnt.innerHTML = "나는 어떻게 된것이요?";
+      pattimgInit()
+      },4400)
+
+    bnt.style.backgroundColor = "rgb(128, 128, 128)";
+    bnt.addEventListener('click', function(){
+      doctimgInit()
+      txt.innerHTML = "당신은 탈수증에 걸렸소";
+      pattimgInit()
+      setTimeout(function(){
+        bnt.innerHTML = "그러면 죽는것이오?";
+        bnt.addEventListener('click', function(){
+          doctimgInit()
+          txt.innerHTML = "걱정 말고 링겔이나 맞으시오";
+          setTimeout(function(){
+            bnt.innerHTML = "그러면 링겔을 주시오";
+            pattimgInit()
+          },2200);
+        })
+      },2200);
+    })
+    
+
+  </script>
 </body>
 </html>
