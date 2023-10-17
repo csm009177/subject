@@ -16,9 +16,10 @@ let server = http.createServer(function(request, response){
         console.error('파일을 읽지 못했습니다');
       } else {
         response.writeHead(200, contenType);
+        response.write('test'); 
         response.end(data);
-        response.write('test') 
         // test는 어디에 출력되는 걸까? test로 단일 write일 때는 출력이 된다
+        // answer end 뒤쪽에 있으면 끝나고 내보내기 때문에 안나옴
       }
     })
   }
@@ -35,7 +36,7 @@ let server = http.createServer(function(request, response){
   }
 });
 
-let PORT = 8080
+let PORT = 2020
 server.listen(`${PORT}`, function(){
   console.log('서버 가동중 끄려면 Ctrl + C를 누르세요')
   console.log(`cli 창에서 컨트롤 누른후  옆에 포트 누르면 편리하게 확인 -> http://localhost:${PORT}/`);
