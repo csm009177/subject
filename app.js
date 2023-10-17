@@ -21,9 +21,7 @@ let server = http.createServer(function(request, response){
         // answer end 뒤쪽에 있으면 끝나고 내보내기 때문에 안나옴
       }
     })
-  }
-  
-  if (request.url === "/hos" && request.method === "GET"){
+  } else if (request.url === "/hos" && request.method === "GET"){
     fs.readFile("hos.html", function(err, data){
       if (err) {
         console.error('파일을 읽지 못했습니다');
