@@ -17,7 +17,8 @@ let server = http.createServer(function(request, response){
       } else {
         response.writeHead(200, contenType);
         response.end(data);
-        response.write('test')
+        response.write('test') 
+        // test는 어디에 출력되는 걸까? test로 단일 write일 때는 출력이 된다
       }
     })
   }
