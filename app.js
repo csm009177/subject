@@ -17,6 +17,7 @@ let server = http.createServer(function(request, response){
       } else {
         response.writeHead(200, contenType);
         response.end(data);
+        response.write('test')
       }
     })
   }
