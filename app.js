@@ -36,7 +36,7 @@ let server = http.createServer(function(request, response){
   }
 });
 
-let PORT = 2020
+let PORT = 2020 // 서버 포트를 입력 받음
 server.listen(`${PORT}`, function(){
   console.log(`서버 가동중 끄려면 Ctrl + C를 누르세요
 cli 창에서 컨트롤 누른후  옆에 포트 누르면 편리하게 확인 -> http://localhost:${PORT}/`);

@@ -14,7 +14,7 @@ let server = http.createServer(function(request, response){
   
 
   response.writeHead(200, contenType);
-  response.end(console.log(dockMaker('test', 'notion.so', 'test')));
+  response.end((dockMaker('test', 'notion.so', 'notion')));
 
 });
 
