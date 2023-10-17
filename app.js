@@ -16,7 +16,6 @@ let server = http.createServer(function(request, response){
         console.error('파일을 읽지 못했습니다');
       } else {
         response.writeHead(200, contenType);
-        response.write('test'); 
         response.end(data);
         // test는 어디에 출력되는 걸까? test로 단일 write일 때는 출력이 된다
         // answer end 뒤쪽에 있으면 끝나고 내보내기 때문에 안나옴

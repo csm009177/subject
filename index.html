@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>drinkWata</title>
   <style>
     * {
       margin: 0;
@@ -64,7 +63,7 @@
   <div id="root">
     <img id="drinkWata" alt="">
     <div id="txt"></div>
-    <button id="bnt"></button>
+    <button id="bnt">asdf</button>
   </div>
   <script>
     // 초기 화면 및 
@@ -92,7 +91,7 @@
     // 첫번째 클릭을 위한 버튼 만들기
     bnt.addEventListener('click', function () {
       setTimeout(function () {
-        if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
+        if(img.src==="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
         divTxt.style.color = "black";
         divTxt.innerHTML = "한번 마셨다";
         img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";}
@@ -102,7 +101,7 @@
         // 첫번째 클릭 후에 두번째 클릭을 위한 세팅
         bnt.addEventListener('click', function () {
           setTimeout(function () {
-            if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
+            if(img.src==="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
             divTxt.style.color = "black";
             divTxt.innerHTML = "두번 마셨다";
             img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";
@@ -114,7 +113,7 @@
             // 두번째 클릭 후에 세번째 클릭을 위한 세팅
             bnt.addEventListener('click', function () {
               setTimeout(function () {
-                if(img.src="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
+                if(img.src==="https://www.sisain.co.kr/news/photo/202111/46039_83064_2725.jpg"){
                 divTxt.style.color = "red";
                 divTxt.innerHTML = "세번 마셨다";
                 img.src = "https://jjalbang.today/files/jjalbox/2019/01/20190111_5c38818bed8cc.gif";}
@@ -136,7 +135,7 @@
                       let aTag = document.getElementById('aTag');
                       clearTimeout()
                       bnt.addEventListener("click", ()=>{
-                        if(img.src = "https://image.kmib.co.kr/online_image/2020/0516/611319110014584603_4.jpg"){
+                        if(img.src === "https://image.kmib.co.kr/online_image/2020/0516/611319110014584603_4.jpg"){
                       // window.location = 'hos.html';
                       window.location = 'localhost:8080/hos';
                       clearTimeout()
