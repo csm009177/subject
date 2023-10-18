@@ -1,4 +1,4 @@
-function docMaker(title, href, text) {
+function docMaker(port, title, subName) {
   return `<!DOCTYPE html>
   <html lang="en">
   <head>
@@ -8,7 +8,7 @@ function docMaker(title, href, text) {
     <title>${title}</title>
   </head>
   <body>
-    <a href="${href}">${text}</a>
+    <a href="localhost:${port}/${subName}">${subName}</a>
   </body>
   </html>`;
 };

@@ -7,3 +7,8 @@ const fs = require('fs');
 let contenType = require('./mod/contenType.js');
 // import custom dockMaker
 let dockMaker = require('./mod/dockMaker.js');
+
+let server = http.createServer(function (req, res){
+  // docMaker(title, href, text)
+  let main = dockMaker('sea', 'hospital', 'sea')
+})
